@@ -1,5 +1,5 @@
 {% set name = "iscan" %}
-{% set version = "0.3.5" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8b96ed0ab2e3d75017073904441dd312c95beeb1099950a193c921f48cd7a4c7
+  sha256: f7e605a572328f46ebcd19e376b0149c0746ec73c249b92bca9c091710db5636
 
 build:
   noarch: python
@@ -18,16 +18,16 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
   run:
-    - python >=3.5
+    - python >=3.7
 
 test:
   imports:
     - iscan
   requires:
-    - pytest <6
+    - pytest
     - pip
   commands:
     - iscan -h
@@ -35,17 +35,17 @@ test:
     - pip check
 
 about:
-  home: https://github.com/ZhengnanZhao/iscan
+  home: https://github.com/zzhengnan/iscan
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: iscan helps you identify your project's third-party dependencies
+  summary: iscan helps you identify your project's dependencies
 
   description: |
-    iscan helps you identify your project's third-party dependencies
-  doc_url: https://github.com/ZhengnanZhao/iscan
-  dev_url: https://github.com/ZhengnanZhao/iscan
+    iscan helps you identify your project's dependencies
+  doc_url: https://github.com/zzhengnan/iscan
+  dev_url: https://github.com/zzhengnan/iscan
 
 extra:
   recipe-maintainers:
-    - ZhengnanZhao
+    - zzhengnan
