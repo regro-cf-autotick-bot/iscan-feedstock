@@ -1,5 +1,5 @@
 {% set name = "iscan" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f7e605a572328f46ebcd19e376b0149c0746ec73c249b92bca9c091710db5636
+  sha256: c9798812561d886ec91cb7c27c9b7d2766353811ffd24c9fe557c83ede1c062d
 
 build:
   noarch: python
